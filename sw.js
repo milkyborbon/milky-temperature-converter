@@ -1,23 +1,13 @@
-var GHPATH = '/milky-temperature-converter';
-var APP_PREFIX = 'temppwa_';
-var VERSION = 'version_00';
-
-var URLS = [    
-  '${GHPATH}/',
-  '${GHPATH}/index.html',
-  '${GHPATH}/converter.css'
-]
-
-const CACHE_NAME = `temperature-converter-v1`;
-
+const CACHE_NAME = 'temperature-converter-v1';
+    
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
-      '/',
-      '/converter.js',
-      '/converter.css'
+      './',
+      './converter.js',
+      './converter.css'
     ]);
   })());
 });
@@ -34,12 +24,12 @@ self.addEventListener('fetch', event => {
         try {
           // If the resource was not in the cache, try the network.
           const fetchResponse = await fetch(event.request);
-
+    
           // Save the resource in the cache and return it.
           cache.put(event.request, fetchResponse.clone());
           return fetchResponse;
         } catch (e) {
-          // The network failed.
+          // The network failed
         }
     }
   })());
