@@ -1,3 +1,13 @@
+var GHPATH = '/milky-temperature-converter';
+var APP_PREFIX = 'temppwa_';
+var VERSION = 'version_00';
+
+var URLS = [    
+  '${GHPATH}/',
+  '${GHPATH}/index.html',
+  '${GHPATH}/converter.css'
+]
+
 const CACHE_NAME = `temperature-converter-v1`;
 
 // Use the install event to pre-cache all initial resources.
