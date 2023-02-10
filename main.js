@@ -10,17 +10,17 @@ function initializeApp() {
     console.log("Service Worker and Push is supported");
 
     //Register the service worker
-    // navigator.serviceWorker
-    //   .register("../../sw.js")
-    //   .then(swReg => {
-    //     console.log("Service Worker is registered", swReg);
+    navigator.serviceWorker
+      .register("sw.js")
+      .then(swReg => {
+        console.log("Service Worker is registered", swReg);
 
-    //     swRegistration = swReg;
-    //     initializeUi();
-    //   })
-    //   .catch(error => {
-    //     console.error("Service Worker Error", error);
-    //   });
+        swRegistration = swReg;
+        initializeUi();
+      })
+      .catch(error => {
+        console.error("Service Worker Error", error);
+      });
       initializeUi();
   } else {
     console.warn("Push messaging is not supported");
