@@ -36,3 +36,20 @@ html {
     font-size: 2rem;
     font-weight: bold;
   }
+
+  .container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #enableNotifications {
+    height: 80px;
+    width: 350px;
+    background-color: black;
+    color: white;
+    border: 1px;
+    border-radius: 500px;
+    font-size: 24px;
+  }
